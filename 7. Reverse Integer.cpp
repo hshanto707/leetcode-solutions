@@ -1,4 +1,4 @@
-// Problem URL: https://leetcode.com/problems/reverse-integer/
+// Problem URL: https://leetcode.com/problems/reverse-integer
 
 class Solution {
 public:

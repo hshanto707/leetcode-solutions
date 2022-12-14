@@ -1,4 +1,4 @@
-// Problem URL: https://leetcode.com/problems/palindrome-number/description/
+// Problem URL: https://leetcode.com/problems/palindrome-number
 
 class Solution {
 public:
