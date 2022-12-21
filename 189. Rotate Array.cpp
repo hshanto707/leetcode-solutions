@@ -1,4 +1,4 @@
-// Problem URL: https://leetcode.com/problems/palindrome-number
+// Problem URL: https://leetcode.com/problems/rotate-array
 
 class Solution {
 public:
