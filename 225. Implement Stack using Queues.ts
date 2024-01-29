@@ -1,21 +1,58 @@
+class MyQueue {
+  queue;
+
+  constructor() {
+    this.queue = [];
+  }
+
+  enqueue(x) {
+    this.queue.push(x);
+  }
+
+  dequeue() {
+    const peek = this.peek();
+    this.queue.shift();
+
+    return peek;
+  }
+
+  peek() {
+    return this.queue[0];
+  }
+
+  size() {
+    return this.queue.length;
+  }
+
+  isEmpty() {
+    return this.size() === 0;
+  }
+}
+
 class MyStack {
-  arr: number[] = [];
-  constructor() {}
+  public Q;
+  constructor() {
+    this.Q = new MyQueue();
+  }
 
   push(x: number): void {
-      this.arr.push(x);
+    this.Q.enqueue(x);
+
+    for (let i = 1; i <= this.Q.size() - 1; i++) {
+      let r = this.Q.dequeue();
+      this.Q.enqueue(r);
+    }
   }
 
   pop(): number {
-      return this.arr.pop()
+    return this.Q.dequeue();
   }
 
   top(): number {
-      const lastIdx = this.arr.length - 1;
-      return this.arr[lastIdx];
+    return this.Q.peek();
   }
 
   empty(): boolean {
-      return (this.arr.length === 0)
+    return this.Q.isEmpty();
   }
 }
